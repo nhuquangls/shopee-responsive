@@ -33,18 +33,26 @@ header .bottom-navbar {
   display: none;
 }
 header .right-navbar ul {
-  justify-content: space-between;
+  justify-content: end;
 }
 header li {
   cursor: pointer;
   padding: 5px;
 }
+header .split-right-nav {
+  flex-grow: 1;
+}
 header .logo {
-  padding: 20px;
+  display: flex;
+  align-items: center;
+  padding: 0 0 10px 10px;
+}
+header .cart {
+  text-align: center;
 }
 header .cart i {
   font-size: 30px;
-  padding: 20px;
+  padding-top: 20px;
   cursor: pointer;
 }
 header .center-content {
@@ -72,9 +80,6 @@ header .search-box i {
   cursor: pointer;
 }
 
-main .container {
-  max-height: 100%;
-}
 main .ads {
   margin: 20px 0;
   height: 250px;
@@ -82,6 +87,7 @@ main .ads {
 main .ads img {
   overflow: hidden;
   padding: 2px;
+  height: 100%;
 }
 main .ads .ads-slider {
   position: relative;
@@ -105,6 +111,46 @@ main .ads .ads-static {
 main .ads .ads-static div {
   height: 50%;
 }
+main .sidebar {
+  align-items: start;
+}
+main .sidebar .sidebar-item {
+  width: 20%;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.1s ease-in-out;
+}
+main .sidebar .sidebar-item:hover {
+  transform: scale(1.2);
+}
+main .sidebar .sidebar-item img {
+  width: 50%;
+}
+main .main-content {
+  background-color: #f5f5f5;
+  min-height: 100vh;
+  padding-top: 20px;
+}
+main .main-content .menu {
+  height: 400px;
+  background-color: white;
+  border-radius: 2px;
+}
+main .main-content .menu p {
+  padding: 20px;
+  color: rgba(0, 0, 0, 0.54);
+  font-size: 16px;
+}
+main .main-content .menu .menu-item {
+  display: flex;
+  flex-wrap: wrap;
+}
+main .main-content .menu .menu-item .items {
+  width: 10%;
+  height: 150px;
+  border: 1px solid #f5f5f5;
+}
 
 /* small screen */
 /* medium screen */
@@ -119,10 +165,19 @@ main .ads .ads-static div {
   header .bottom-navbar {
     display: flex;
   }
+  header .split-right-nav {
+    flex-grow: 0;
+  }
   header .cart i {
     font-size: 50px;
   }
+  header .logo {
+    padding: 10px;
+  }
   main .ads .ads-static {
     display: flex;
+  }
+  main .sidebar .sidebar-item {
+    width: 10%;
   }
 }/*# sourceMappingURL=style.css.map */
