@@ -82,10 +82,10 @@ header .search-box i {
 
 main .ads {
   margin: 20px 0;
-  height: 250px;
+  height: 200px;
+  overflow: hidden;
 }
 main .ads img {
-  overflow: hidden;
   padding: 2px;
   height: 100%;
 }
@@ -133,9 +133,9 @@ main .main-content {
   padding-top: 20px;
 }
 main .main-content .menu {
-  height: 400px;
   background-color: white;
   border-radius: 2px;
+  position: relative;
 }
 main .main-content .menu p {
   padding: 20px;
@@ -144,12 +144,43 @@ main .main-content .menu p {
 }
 main .main-content .menu .menu-item {
   display: flex;
-  flex-wrap: wrap;
+  overflow: hidden;
 }
 main .main-content .menu .menu-item .items {
-  width: 10%;
-  height: 150px;
+  flex-shrink: 0;
+  width: 20%;
   border: 1px solid #f5f5f5;
+  cursor: pointer;
+  transition: transform 0.5s ease;
+  text-align: center;
+  padding: 10px;
+}
+main .main-content .menu .menu-item .items img {
+  width: 100%;
+}
+main .main-content .menu .menu-item .items:hover {
+  border: 2px solid #f5f5f5;
+}
+main .main-content .menu .btn {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #f5f5f5;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translate(-50%, -50%) scale(1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+main .main-content .menu .btn:hover {
+  transform: translate(-50%, -50%) scale(1.5);
+}
+main .main-content .menu #left-btn {
+  left: 0;
 }
 
 /* small screen */
@@ -179,5 +210,13 @@ main .main-content .menu .menu-item .items {
   }
   main .sidebar .sidebar-item {
     width: 10%;
+  }
+  main .main-content .menu .menu-item .items {
+    width: 10%;
+  }
+}
+@media (min-width: 1239px) {
+  main .ads {
+    height: 250px;
   }
 }/*# sourceMappingURL=style.css.map */
