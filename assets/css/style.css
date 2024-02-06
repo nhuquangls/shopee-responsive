@@ -80,6 +80,9 @@ header .search-box i {
   cursor: pointer;
 }
 
+main {
+  border-bottom: 5px solid #ee4d2d;
+}
 main .ads {
   margin: 20px 0;
   height: 200px;
@@ -228,6 +231,27 @@ main .main-content .products .products-content .product .price {
 }
 main .main-content .products .products-content .product .sold {
   color: rgba(0, 0, 0, 0.54);
+}
+main .main-content .products .products-end {
+  justify-content: center;
+}
+main .main-content .products .products-end .show-more-btn {
+  border: 1px solid rgba(0, 0, 0, 0.54);
+  background-color: white;
+  padding: 5px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.54);
+  margin: 20px 0;
+  cursor: pointer;
+}
+main .main-content .products .products-end .show-more-btn:hover {
+  background-color: #f5f5f5;
+}
+
+footer .footer-content {
+  text-align: center;
+  color: rgba(0, 0, 0, 0.54);
+  padding: 20px;
 }
 
 /* small screen */

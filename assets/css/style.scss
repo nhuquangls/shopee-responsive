@@ -81,6 +81,7 @@ header {
 }
 
 main {
+    border-bottom: 5px solid $main-color;
     .ads {
         margin: 20px 0;
         height: 200px;
@@ -231,7 +232,30 @@ main {
                     }
                 }
             }
+            .products-end {
+                justify-content: center;
+                .show-more-btn {
+                    border: 1px solid rgba(0, 0, 0, 0.54);
+                    background-color: white;
+                    padding: 5px;
+                    text-align: center;
+                    color: rgba(0, 0, 0, 0.54);
+                    margin: 20px 0;
+                    cursor: pointer;
+                    &:hover {
+                        background-color: $second-color;
+                    }
+                }
+            }
+            
         }
+    }
+}
+footer {
+    .footer-content {
+        text-align: center;
+        color: rgba(0, 0, 0, 0.54);
+        padding: 20px;
     }
 }
 /* small screen */
